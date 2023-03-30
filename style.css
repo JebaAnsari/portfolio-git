@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    scroll-behavior: smooth;
+    --background-color:hsl(240deg,80%,100%);
+    --secondary-color:hsl(225,85%,57%);
+    --text-color:hsl(240,95%,8%);
+    --intro-color:hsl(0,0%,83%);
+    --shadow-color:hsl(225,10%,83%);
+    --shadow-color-dark:hsl(225,10%,63%);
+    --font-size-small:0.5rem;
+    --font-size-regular:1rem;
+    --font-size-xl:2rem;
+    --spacinng-regular:16px;
+    --spacing-small:calc(var(--spacing-regular)/2);
+}
+ 
+header{
+    background: #0f2027;
+    background: -webkit-linear-gradient(to right,#2C5364,#203A43,#0f200f);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    align-items: center;
+    border-bottom:#fff;
+    padding-bottom:20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+header nav ul{
+    display: flex;
+    position: relative;
+    left: 850px;
+    padding-top: 15px;
+}
+header nav ul li a{
+    display: inline-block;
+    color: aliceblue;
+    padding: 5px 1px;
+    margin: 0 10px;
+    border: 1px solid transparent;
+    transition-delay:0.2s;
+}
+header:hover{
+    background-color: #386270;
+    cursor: pointer;
+}
+a:hover{
+    border-bottom-color: aliceblue;
+    cursor: pointer;
+    color: black;
+
+}
+a.active{
+    border-bottom-color: #fff;
+}
+#profile-image{
+    height: 350px;
+    width: 350px;
+    border-radius: 55%;
+    filter: drop-shadow(4px -6px 10px rgba(0, 0, 0, 0.526));
+    
+    
+}
+#social-links img{
+    align-items: center;
+    justify-content: center;
+    display: inline-block; 
+    margin-top: 25px;   
+}
+#social-links a{
+    text-decoration: none;
+    margin: auto 16px;
+    padding-top: 50px;
+    justify-content: space-around;
+}
+#intro{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: #91a9a9;
+    background: -webkit-linear-gradient(to right,#7e8788,#667a80,#a3bfa3);
+    margin: -16px;
+    padding: 16px;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+table ,tr,td,th{
+    border: 1px solid;
+    border-collapse: collapse;
+    margin: 16px;
+
+}
+th,td{
+    padding: 8px;
+    background-color: lightblue;
+}
+td{
+    margin: 16px;
+    padding: 10px;
+    height: 15vh;
+}
+th{
+    height: 5vh;
+    padding: 5px;
+    margin: 5px;
+    background-color: #cedada;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: var(--spacing-regular);
+    box-shadow: 3px 3px 6px 5px var(--shadow-color);
+    width: 100%;
+    border-radius: var(--spacing-regular);
+    transition: transition 0.4s ease-in,box-shadow 0.4s ease-in-out ;
+    
+}
+.card:hover{
+    box-shadow: 3px 3px 8px 9px var(--shadow-color-dark);
+    transform: translateY(calc-1*var(--spacing-small));
+   
+
+}
+.card ul{
+    list-style: none;
+    padding: 0;
+
+}
+.card header h1{
+    margin: 0;
+
+}
+.card h2{
+    margin: 16px;
+    padding: 10px;
+}
+.container{
+    padding: 16px;
+}
+#About h2{
+    align-items: center;
+    padding:16px;
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+}
+.about2{
+    color: #0f1027;
+    padding: 16px;
+    font-size: larger;
+    width: 100%;
+    margin-top: 17px;
+    box-shadow: 3px 3px 8px 9px var(--shadow-color-dark);
+}
+.about2:hover{
+    transition: transition 0.4s ease-in,box-shadow 0.4s ease-in-out ;
+    color: #fff;
+    box-shadow: 3px 3px 8px 9px var(--shadow-color-dark);
+    transform: translateY(calc-1*var(--spacing-small));
+    background-color: #808093;
+}
+#Education:hover{
+    background-color: #9e9eaf;
+    
+}
+
+#Projects h2{
+    margin: 16px;
+    margin-bottom: 20px;
+}
+.cardP{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: var(--spacing-regular);
+    box-shadow: 3px 3px 6px 5px var(--shadow-color);
+    width: 100%;
+    border-radius: var(--spacing-regular);
+    transition: transition 0.4s ease-in,box-shadow 0.4s ease-in-out ; 
+}
+.cardP:hover{
+    box-shadow: 3px 3px 8px 9px var(--shadow-color-dark);
+    transform: translateY(calc-1*var(--spacing-small));
+}
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container1 {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%;  background-color: #04AA6D;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 65%; background-color: #f44336;} /* Red */
+.php {width: 60%; background-color: #808080;} /* Dark Grey */
+
+footer{
+    padding:16px;
+    text-align: center;
+    border-top:4px solid;
+}
+.image{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    padding: 16px;
+    margin: 16px;
+}
+.img{
+    border: 1px solid black;
+}
+.work h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 16px;
+    margin: 5px;
+}
+.btn{
+    padding: 10px;
+    display: inline-block;
+    margin: 2px;
+    border: 1px solid black;
+    background: #1fb1b6;
+    background: -webkit-linear-gradient(to right,#7e8788,#667a80,#a3bfa3);
+    color:white;
+    font-size: large;
+}
+.btn:hover{
+    cursor: pointer;
+    transition: 0.5s linear;
+    background-color: grey;
+    color:black;
+    border-radius: 5px;
+}
+.ima{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.lap{
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+form#contact{
+    max-width: 400px;
+    margin:auto;
+    padding: 16px;
+    border:1px solid;
+    border-radius: 16px;
+}
+#contact label{
+    display: block;
+    font-weight: 600;
+    font-size: var(--font-size-regular);
+}
+#contact-me{
+    margin-top:16px;
+}
+footer:hover{
+    cursor: pointer;
+    background: grey;
+   
+}
+footer li a{
+        text-decoration: none;
+        color: black;
+}
+.text{
+    font-size: large;
+    font-family: cursive;
+
+}
+footer{
+    padding: 10px;
+    height: 35vh;
+}
+#contact-me h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 16px;
+}
